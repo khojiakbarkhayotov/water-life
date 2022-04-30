@@ -32,7 +32,7 @@
                 <hr>
                 <div class="clearfix">
                     <a class="btn btn-outline-success float-right" href="https://form.jotform.com/221191833124448">Donate</a>
-                    {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com"%}
+                    {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com": %}
                     <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Edit
                         Post</a>
                     {% endif %}
