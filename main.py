@@ -74,7 +74,7 @@ def admin_only(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if current_user.id != 1 and current_user.email != "inogamov2002u@gmail.com" and current_user.email != "m.muradullaev@student.inha.uz" and current_user.email != "a.khamidov5@student.inha.uz" and current_user.email != "n.ismoilov@student.inha.uz":
-            # return abort(403)
+            #  return abort(403)
             pass
         return f(*args, **kwargs)
     return decorated_function
