@@ -13,7 +13,7 @@ from forms import LoginForm, RegisterForm, CreatePostForm, CommentForm
 from flask_gravatar import Gravatar
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = "343"  # os.environ.get("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
@@ -71,7 +71,7 @@ db.create_all()
 def admin_only(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if current_user.id != 1 and current_user.email != "inogamov2002u@gmail.com":
+        if current_user.id != 1 and current_user.email != "inogamov2002u@gmail.com" and current_user.email != "m.muradullaev@student.inha.uz" and current_user.email != "a.khamidov5@student.inha.uz" and current_user.email != "n.ismoilov@student.inha.uz":
             return abort(403)
         return f(*args, **kwargs)
     return decorated_function

@@ -33,7 +33,7 @@
           <p class="post-meta">Posted by
             {{post.author.name}}
             on {{post.date}}
-            {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com": %}
+            {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com" or current_user.email == "m.muradullaev@student.inha.uz" or current_user.email == "a.khamidov5@student.inha.uz" or current_user.email == "n.ismoilov@student.inha.uz" %}
             <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
             {% endif %}
           </p>
@@ -42,7 +42,7 @@
 
 
         <!-- New Post -->
-        {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com" %}
+        {% if current_user.id == 1  or current_user.email == "inogamov2002u@gmail.com" or current_user.email == "m.muradullaev@student.inha.uz" or current_user.email == "a.khamidov5@student.inha.uz" or current_user.email == "n.ismoilov@student.inha.uz" %}
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{url_for('add_new_post')}}">Create New Post</a>
         </div>

@@ -4,7 +4,6 @@
 {% block content %}
 {% include "header.html" %}
 
-
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('{{post.img_url}}')">
     <div class="overlay"></div>
@@ -32,9 +31,8 @@
                 <hr>
                 <div class="clearfix">
                     <a class="btn btn-outline-success float-right" href="https://form.jotform.com/221191833124448">Donate</a>
-                    {% if current_user.id == 1 or current_user.email == "inogamov2002u@gmail.com": %}
-                    <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Edit
-                        Post</a>
+                    {% if current_user.id == 1  or current_user.email == "inogamov2002u@gmail.com" or current_user.email == "m.muradullaev@student.inha.uz" or current_user.email == "a.khamidov5@student.inha.uz" or current_user.email == "n.ismoilov@student.inha.uz"%}
+                        <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Edit Post</a>
                     {% endif %}
                 </div>
 
